@@ -48,7 +48,7 @@ int main(int argc, char* argv[])
 			break;
 		}
 		
-		radiotap_header *rt = (struct radiotap_header *)79;
+		radiotap_header *rt = (struct radiotap_header *)packet;
 		beacon_header *bc = (struct beacon_header *)(packet + rt -> it_len);
 		/*printf("%p %d\n",bc,sizeof(beacon_header));
 		bc->print();
